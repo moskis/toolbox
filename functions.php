@@ -21,7 +21,7 @@ if ( is_readable( $locale_file ) )
  * Set the content width based on the theme's design and stylesheet.
  */
 if ( ! isset( $content_width ) )
-	$content_width = 640;
+	$content_width = 640; /* pixels */
 
 /**
  * This theme uses wp_nav_menu() in one location.
@@ -34,6 +34,11 @@ register_nav_menus( array(
  * Add default posts and comments RSS feed links to head
  */
 add_theme_support( 'automatic-feed-links' );
+
+/**
+ * Add support for the Aside and Gallery Post Formats
+ */
+add_theme_support( 'post-formats', array( 'aside', 'gallery' ) );
 
 /**
  * Get our wp_nav_menu() fallback, wp_page_menu(), to show a home link.

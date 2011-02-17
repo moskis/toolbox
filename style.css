@@ -146,6 +146,10 @@ Use it to make something cool, have fun, and share what you've learned with othe
 /* =Content
 -------------------------------------------------------------- */
 
+.entry-meta {
+	clear: both;
+	display: block;
+}
 #content nav {
 	display: block;
 	overflow: hidden;
@@ -219,6 +223,27 @@ Use it to make something cool, have fun, and share what you've learned with othe
 	text-align: center;
 }
 
+/* Aside Posts */
+.format-aside .entry-header {
+	display: none;
+}
+.single .format-aside .entry-header {
+	display: block;
+}
+.format-aside .entry-content,
+.format-aside .entry-summary {
+	padding-top: 1em;
+}
+.single .format-aside .entry-content,
+.single .format-aside .entry-summary {
+	padding-top: 0;
+}
+
+/* Aside Posts */
+.format-gallery .gallery-thumb {
+	float: left;
+	margin-right: 1em;
+}
 
 /* =Images
 -------------------------------------------------------------- */
