@@ -13,15 +13,17 @@ get_header(); ?>
 
 				<header class="page-header">
 					<h1 class="page-title">
-						<?php if ( is_day() ) : ?>
-							<?php printf( __( 'Daily Archives: <span>%s</span>', 'toolbox' ), get_the_date() ); ?>
-						<?php elseif ( is_month() ) : ?>
-							<?php printf( __( 'Monthly Archives: <span>%s</span>', 'toolbox' ), get_the_date( 'F Y' ) ); ?>
-						<?php elseif ( is_year() ) : ?>
-							<?php printf( __( 'Yearly Archives: <span>%s</span>', 'toolbox' ), get_the_date( 'Y' ) ); ?>
-						<?php else : ?>
-							<?php _e( 'Blog Archives', 'toolbox' ); ?>
-						<?php endif; ?>
+						<?php
+							if ( is_day() ) :
+								printf( __( 'Daily Archives: <span>%s</span>', 'toolbox' ), get_the_date() );
+							elseif ( is_month() ) :
+								printf( __( 'Monthly Archives: <span>%s</span>', 'toolbox' ), get_the_date( 'F Y' ) );
+							elseif ( is_year() ) :
+								printf( __( 'Yearly Archives: <span>%s</span>', 'toolbox' ), get_the_date( 'Y' ) );
+							else :
+								_e( 'Archives', 'toolbox' );
+							endif;
+						?>
 					</h1>
 				</header>
 
