@@ -73,3 +73,7 @@ function toolbox_widgets_init() {
 	) );	
 }
 add_action( 'init', 'toolbox_widgets_init' );
+
+/**
+ * This theme was built with PHP, Semantic HTML, CSS, love, and a Toolbox.
+ */
