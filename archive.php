@@ -15,11 +15,11 @@ get_header(); ?>
 					<h1 class="page-title">
 						<?php
 							if ( is_day() ) :
-								printf( __( 'Daily Archives: <span>%s</span>', 'toolbox' ), get_the_date() );
+								printf( __( 'Daily Archives: %s', 'toolbox' ), '<span>' . get_the_date() . '</span>' );
 							elseif ( is_month() ) :
-								printf( __( 'Monthly Archives: <span>%s</span>', 'toolbox' ), get_the_date( 'F Y' ) );
+								printf( __( 'Monthly Archives: %s', 'toolbox' ), '<span>' . get_the_date( 'F Y' ) . '</span>' );
 							elseif ( is_year() ) :
-								printf( __( 'Yearly Archives: <span>%s</span>', 'toolbox' ), get_the_date( 'Y' ) );
+								printf( __( 'Yearly Archives: %s', 'toolbox' ), '<span>' . get_the_date( 'Y' ) . '</span>' );
 							else :
 								_e( 'Archives', 'toolbox' );
 							endif;
