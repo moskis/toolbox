@@ -106,7 +106,7 @@ function toolbox_comment( $comment, $args, $depth ) {
 					<a href="<?php echo esc_url( get_comment_link( $comment->comment_ID ) ); ?>"><time pubdate datetime="<?php comment_time( 'c' ); ?>">
 					<?php
 						/* translators: 1: date, 2: time */
-						printf( __( '%1$s at %2$s', 'toolbox' ), get_comment_date(),  get_comment_time() ); ?>
+						printf( __( '%1$s at %2$s', 'toolbox' ), get_comment_date(), get_comment_time() ); ?>
 					</time></a>
 					<?php edit_comment_link( __( '(Edit)', 'toolbox' ), ' ' );
 					?>
@@ -118,15 +118,15 @@ function toolbox_comment( $comment, $args, $depth ) {
 			<div class="reply">
 				<?php comment_reply_link( array_merge( $args, array( 'depth' => $depth, 'max_depth' => $args['max_depth'] ) ) ); ?>
 			</div><!-- .reply -->
-		</article><!-- #comment-##  -->
+		</article><!-- #comment-## -->
 
 	<?php
 			break;
-		case 'pingback'  :
+		case 'pingback' :
 		case 'trackback' :
 	?>
 	<li class="post pingback">
-		<p><?php _e( 'Pingback:', 'toolbox' ); ?> <?php comment_author_link(); ?><?php edit_comment_link( __('(Edit)', 'toolbox'), ' ' ); ?></p>
+		<p><?php _e( 'Pingback:', 'toolbox' ); ?> <?php comment_author_link(); ?><?php edit_comment_link( __( '(Edit)', 'toolbox' ), ' ' ); ?></p>
 	<?php
 			break;
 	endswitch;

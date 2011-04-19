@@ -16,10 +16,7 @@
 
 	<?php if ( have_comments() ) : ?>
 		<h2 id="comments-title">
-			<?php
-			    printf( _n( 'One Response to %2$s', '%1$s Responses to %2$s', get_comments_number(), 'toolbox' ),
-			        number_format_i18n( get_comments_number() ), '<em>' . get_the_title() . '</em>' );
-			?>
+			<?php printf( _n( 'One Response to %2$s', '%1$s Responses to %2$s', get_comments_number(), 'toolbox' ), number_format_i18n( get_comments_number() ), '<em>' . get_the_title() . '</em>' ); ?>
 		</h2>
 
 		<?php if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) : // are there comments to navigate through ?>

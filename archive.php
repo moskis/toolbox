@@ -46,7 +46,7 @@ get_header(); ?>
 				<?php endwhile; ?>
 				
 				<?php /* Display navigation to next/previous pages when applicable */ ?>
-				<?php if (  $wp_query->max_num_pages > 1 ) : ?>
+				<?php if ( $wp_query->max_num_pages > 1 ) : ?>
 					<nav id="nav-below">
 						<h1 class="section-heading"><?php _e( 'Post navigation', 'toolbox' ); ?></h1>
 						<div class="nav-previous"><?php next_posts_link( __( '<span class="meta-nav">&larr;</span> Older posts', 'toolbox' ) ); ?></div>
