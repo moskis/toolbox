@@ -24,7 +24,7 @@ get_header(); ?>
 					<div class="widget">
 						<h2 class="widgettitle"><?php _e( 'Most Used Categories', 'toolbox' ); ?></h2>
 						<ul>
-						<?php wp_list_categories( array( 'orderby' => 'count', 'order' => 'DESC', 'show_count' => 'TRUE', 'title_li' => '', 'number' => '10' ) ); ?>
+						<?php wp_list_categories( array( 'orderby' => 'count', 'order' => 'DESC', 'show_count' => 1, 'title_li' => '', 'number' => 10 ) ); ?>
 						</ul>
 					</div>
 
