@@ -24,6 +24,15 @@ if ( ! isset( $content_width ) )
 	$content_width = 640; /* pixels */
 
 /**
+ * Set a default theme color array for WP.com.
+ */
+$themecolors = array(
+	'bg' => 'ffffff',
+	'border' => 'eeeeee',
+	'text' => '444444',
+);
+
+/**
  * This theme uses wp_nav_menu() in one location.
  */
 register_nav_menus( array(
