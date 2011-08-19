@@ -21,7 +21,12 @@
 
 	<footer class="entry-meta">
 		<?php
+			/* translators: used between list items, there is a space after the comma */
+			$category_list = get_the_category_list( __( ', ', 'toolbox' ) );
+
+			/* translators: used between list items, there is a space after the comma */
 			$tag_list = get_the_tag_list( '', ', ' );
+			
 			if ( '' != $tag_list ) {
 				$meta_text = __( 'This entry was posted in %1$s and tagged %2$s. Bookmark the <a href="%3$s" title="Permalink to %4$s" rel="bookmark">permalink</a>.', 'toolbox' );
 			} else {
@@ -29,7 +34,7 @@
 			}
 			printf(
 				$meta_text,
-				get_the_category_list( ', ' ),
+				$category_list,
 				$tag_list,
 				get_permalink(),
 				the_title_attribute( 'echo=0' )
