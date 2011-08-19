@@ -1,7 +1,10 @@
 <?php
 /**
+ * The template for displaying 404 pages (Not Found).
+ *
  * @package WordPress
  * @subpackage Toolbox
+ * @since Toolbox 0.1
  */
 
 get_header(); ?>
@@ -29,6 +32,7 @@ get_header(); ?>
 					</div>
 
 					<?php
+					/* translators: %1$s: smilie */
 					$archive_content = '<p>' . sprintf( __( 'Try looking in the monthly archives. %1$s', 'toolbox' ), convert_smilies( ':)' ) ) . '</p>';
 					the_widget( 'WP_Widget_Archives', 'dropdown=1', "after_title=</h2>$archive_content" );
 					?>

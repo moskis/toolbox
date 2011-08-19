@@ -1,7 +1,10 @@
 <?php
 /**
+ * The template for displaying image attachments.
+ *
  * @package WordPress
  * @subpackage Toolbox
+ * @since Toolbox 0.1
  */
 
 get_header(); ?>
@@ -66,8 +69,8 @@ get_header(); ?>
 	}
 ?>
 								<a href="<?php echo $next_attachment_url; ?>" title="<?php echo esc_attr( get_the_title() ); ?>" rel="attachment"><?php
-								$attachment_size = apply_filters( 'theme_attachment_size', 800 );
-								echo wp_get_attachment_image( $post->ID, array( $attachment_size, 9999 ) ); // filterable image width with, essentially, no limit for image height.
+								$attachment_size = apply_filters( 'toolbox_attachment_size', 1200 );
+								echo wp_get_attachment_image( $post->ID, array( $attachment_size, $attachment_size ) ); // filterable image width with, essentially, no limit for image height.
 								?></a>
 							</div><!-- .attachment -->
 
