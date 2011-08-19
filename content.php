@@ -32,7 +32,7 @@
 			<?php
 				/* translators: used between list items, there is a space after the comma */
 				$categories_list = get_the_category_list( __( ', ', 'toolbox' ) );
-				if ( $categories_list ) :
+				if ( $categories_list && toolbox_categorized_blog() ) :
 			?>
 			<span class="cat-links">
 				<?php printf( __( 'Posted in %1$s', 'toolbox' ), $categories_list ); ?>
