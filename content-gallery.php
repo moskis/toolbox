@@ -56,7 +56,10 @@
 		<span class="cat-links"><?php _e( 'Posted in ', 'toolbox' ); ?><?php the_category( ', ' ); ?></span>
 		<span class="sep"> | </span>
 		<?php the_tags( '<span class="tag-links">' . __( 'Tagged ', 'toolbox' ) . '</span>', ', ', '<span class="sep"> | </span>' ); ?>
+		<?php if ( comments_open() || ( '0' != get_comments_number() && ! comments_open() ) ) : ?>
 		<span class="comments-link"><?php comments_popup_link( __( 'Leave a comment', 'toolbox' ), __( '1 Comment', 'toolbox' ), __( '% Comments', 'toolbox' ) ); ?></span>
-		<?php edit_post_link( __( 'Edit', 'toolbox' ), '<span class="sep">|</span> <span class="edit-link">', '</span>' ); ?>
+		<span class="sep"> | </span>
+		<?php endif; ?>
+		<?php edit_post_link( __( 'Edit', 'toolbox' ), '<span class="edit-link">', '</span>' ); ?>
 	</footer><!-- #entry-meta -->
 </article><!-- #post-<?php the_ID(); ?> -->
