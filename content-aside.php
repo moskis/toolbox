@@ -5,7 +5,7 @@
  * Learn more: http://codex.wordpress.org/Post_Formats
  *
  * @package WordPress
- * @subpackage Toolbox 1.0
+ * @subpackage Toolbox
  * @since Toolbox 1.0
  */
 ?>
@@ -17,7 +17,7 @@
 
 	<?php if ( is_search() ) : // Only display Excerpts for search pages ?>
 	<div class="entry-summary">
-		<?php the_excerpt( __( 'Continue reading <span class="meta-nav">&rarr;</span>', 'toolbox' ) ); ?>
+		<?php the_excerpt(); ?>
 	</div><!-- .entry-summary -->
 	<?php else : ?>
 	<div class="entry-content">

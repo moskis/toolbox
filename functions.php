@@ -69,7 +69,7 @@ function toolbox_setup() {
 	/**
 	 * Add support for the Aside and Gallery Post Formats
 	 */
-	add_theme_support( 'post-formats', array( 'aside', 'gallery' ) );
+	add_theme_support( 'post-formats', array( 'aside', 'image', 'gallery' ) );
 }
 endif; // toolbox_setup
 
@@ -139,7 +139,7 @@ function toolbox_content_nav( $nav_id ) {
 		<?php previous_post_link( '<div class="nav-previous">%link</div>', '<span class="meta-nav">' . _x( '&larr;', 'Previous post link', 'toolbox' ) . '</span> %title' ); ?>
 		<?php next_post_link( '<div class="nav-next">%link</div>', '%title <span class="meta-nav">' . _x( '&rarr;', 'Next post link', 'toolbox' ) . '</span>' ); ?>
 
-	<?php elseif ( $wp_query->max_num_pages > 1 && ( is_archive() || is_search() ) ) : // navigation links for archive and search pages ?>
+	<?php elseif ( $wp_query->max_num_pages > 1 && ( is_home() || is_archive() || is_search() ) ) : // navigation links for home, archive, and search pages ?>
 
 		<?php if ( get_next_posts_link() ) : ?>
 		<div class="nav-previous"><?php next_posts_link( __( '<span class="meta-nav">&larr;</span> Older posts', 'toolbox' ) ); ?></div>
@@ -242,7 +242,7 @@ endif;
  * @since Toolbox 1.2
  */
 function toolbox_body_classes( $classes ) {
-
+	// Adds a class of single-author to blogs with only 1 published author
 	if ( ! is_multi_author() ) {
 		$classes[] = 'single-author';
 	}
@@ -250,7 +250,6 @@ function toolbox_body_classes( $classes ) {
 	return $classes;
 }
 add_filter( 'body_class', 'toolbox_body_classes' );
-
 
 /**
  * This theme was built with PHP, Semantic HTML, CSS, love, and a Toolbox.

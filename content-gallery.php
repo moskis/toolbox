@@ -21,7 +21,7 @@
 
 	<?php if ( is_search() ) : // Only display Excerpts for search pages ?>
 	<div class="entry-summary">
-		<?php the_excerpt( __( 'Continue reading <span class="meta-nav">&rarr;</span>', 'toolbox' ) ); ?>
+		<?php the_excerpt(); ?>
 	</div><!-- .entry-summary -->
 	<?php else : ?>
 	<div class="entry-content">
@@ -30,7 +30,7 @@
 
 			<?php else : ?>
 				<?php
-					$images = get_children( array( 'post_parent' => $post->ID, 'post_type' => 'attachment', 'post_mime_type' => 'image', 'orderby' => 'menu_order', 'order' => 'ASC', 'numberposts' => 999 ) );
+					$images = get_children( array( 'post_parent' => $post->ID, 'post_type' => 'attachment', 'post_mime_type' => 'image', 'orderby' => 'menu_order', 'order' => 'ASC' ) );
 					if ( $images ) :
 						$total_images = count( $images );
 						$image = array_shift( $images );
@@ -53,7 +53,7 @@
 	<?php endif; ?>
 
 	<footer class="entry-meta">
-		<span class="cat-links"><span class="entry-utility-prep entry-utility-prep-cat-links"><?php _e( 'Posted in ', 'toolbox' ); ?></span><?php the_category( ', ' ); ?></span>
+		<span class="cat-links"><?php _e( 'Posted in ', 'toolbox' ); ?><?php the_category( ', ' ); ?></span>
 		<span class="sep"> | </span>
 		<?php the_tags( '<span class="tag-links">' . __( 'Tagged ', 'toolbox' ) . '</span>', ', ', '<span class="sep"> | </span>' ); ?>
 		<span class="comments-link"><?php comments_popup_link( __( 'Leave a comment', 'toolbox' ), __( '1 Comment', 'toolbox' ), __( '% Comments', 'toolbox' ) ); ?></span>

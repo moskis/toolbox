@@ -244,11 +244,28 @@ Use it to make something cool, have fun, and share what you've learned with othe
 	padding-top: 0;
 }
 
-/* Aside Posts */
+/* Gallery Posts */
 .format-gallery .gallery-thumb {
 	float: left;
 	margin-right: 1em;
 }
+
+/* Image Posts */
+.format-image .entry-header {
+	display: none;
+}
+.single .format-image .entry-header {
+	display: block;
+}
+.format-image .entry-content,
+.format-image .entry-summary {
+	padding-top: 1em;
+}
+.single .format-image .entry-content,
+.single .format-image .entry-summary {
+	padding-top: 0;
+}
+
 
 /* =Images
 -------------------------------------------------------------- */
