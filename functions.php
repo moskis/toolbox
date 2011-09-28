@@ -291,5 +291,19 @@ add_action( 'edit_category', 'toolbox_category_transient_flusher' );
 add_action( 'save_post', 'toolbox_category_transient_flusher' );
 
 /**
+ * Filter in a link to a content ID attribute for the next/previous image links on image attachment pages
+ */
+function toolbox_enhanced_image_navigation( $url ) {
+	global $post;
+
+	if ( wp_attachment_is_image( $post->ID ) )
+		$url = $url . '#main';
+
+	return $url;
+}
+add_filter( 'attachment_link', 'toolbox_enhanced_image_navigation' );
+
+
+/**
  * This theme was built with PHP, Semantic HTML, CSS, love, and a Toolbox.
  */
