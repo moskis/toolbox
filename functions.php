@@ -171,7 +171,14 @@ if ( ! function_exists( 'toolbox_comment' ) ) :
 function toolbox_comment( $comment, $args, $depth ) {
 	$GLOBALS['comment'] = $comment;
 	switch ( $comment->comment_type ) :
-		case '' :
+		case 'pingback' :
+		case 'trackback' :
+	?>
+	<li class="post pingback">
+		<p><?php _e( 'Pingback:', 'toolbox' ); ?> <?php comment_author_link(); ?><?php edit_comment_link( __( '(Edit)', 'toolbox' ), ' ' ); ?></p>
+	<?php
+			break;
+		default :
 	?>
 	<li <?php comment_class(); ?> id="li-comment-<?php comment_ID(); ?>">
 		<article id="comment-<?php comment_ID(); ?>" class="comment">
@@ -203,13 +210,6 @@ function toolbox_comment( $comment, $args, $depth ) {
 			</div><!-- .reply -->
 		</article><!-- #comment-## -->
 
-	<?php
-			break;
-		case 'pingback' :
-		case 'trackback' :
-	?>
-	<li class="post pingback">
-		<p><?php _e( 'Pingback:', 'toolbox' ); ?> <?php comment_author_link(); ?><?php edit_comment_link( __( '(Edit)', 'toolbox' ), ' ' ); ?></p>
 	<?php
 			break;
 	endswitch;
