@@ -47,10 +47,10 @@ function toolbox_setup() {
 	 * If you're building a theme based on toolbox, use a find and replace
 	 * to change 'toolbox' to the name of your theme in all the template files
 	 */
-	load_theme_textdomain( 'toolbox', TEMPLATEPATH . '/languages' );
+	load_theme_textdomain( 'toolbox', get_template_directory() . '/languages' );
 
 	$locale = get_locale();
-	$locale_file = TEMPLATEPATH . "/languages/$locale.php";
+	$locale_file = get_template_directory() . "/languages/$locale.php";
 	if ( is_readable( $locale_file ) )
 		require_once( $locale_file );
 
