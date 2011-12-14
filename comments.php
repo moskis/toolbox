@@ -64,7 +64,7 @@
 		<?php endif; // check for comment navigation ?>
 
 	<?php endif; // have_comments() ?>
-	
+
 	<?php
 		// If comments are closed and there are no comments, let's leave a little note, shall we?
 		if ( ! comments_open() && '0' != get_comments_number() && post_type_supports( get_post_type(), 'comments' ) ) :
