@@ -7,8 +7,7 @@
  * handled by a callback to toolbox_comment() which is
  * located in the functions.php file.
  *
- * @package WordPress
- * @subpackage Toolbox
+ * @package Toolbox
  * @since Toolbox 0.1
  */
 ?>

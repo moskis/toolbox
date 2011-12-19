@@ -4,8 +4,7 @@
  *
  * Displays all of the <head> section and everything up till <div id="main">
  *
- * @package WordPress
- * @subpackage Toolbox
+ * @package Toolbox
  * @since Toolbox 0.1
  */
 ?><!DOCTYPE html>

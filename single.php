@@ -2,8 +2,7 @@
 /**
  * The Template for displaying all single posts.
  *
- * @package WordPress
- * @subpackage Toolbox
+ * @package Toolbox
  * @since Toolbox 0.1
  */
 

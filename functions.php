@@ -18,8 +18,7 @@
  *
  * For more information on hooks, actions, and filters, see http://codex.wordpress.org/Plugin_API.
  *
- * @package WordPress
- * @subpackage Toolbox
+ * @package Toolbox
  * @since Toolbox 0.1
  */
 
