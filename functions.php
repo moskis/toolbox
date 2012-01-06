@@ -239,10 +239,11 @@ endif;
  * Adds custom classes to the array of body classes.
  *
  * @since Toolbox 1.2
+ * @uses is_multi_author, added in WP 3.2
  */
 function toolbox_body_classes( $classes ) {
 	// Adds a class of single-author to blogs with only 1 published author
-	if ( ! is_multi_author() ) {
+	if ( function_exists( 'is_multi_author' ) && ! is_multi_author() ) {
 		$classes[] = 'single-author';
 	}
 
