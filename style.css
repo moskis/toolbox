@@ -331,6 +331,7 @@ img.alignright {
 	width: 60%;
 }
 input[type=text],
+input[type=email],
 input#s {
 	margin: 0 1em 0 0;
 	width: 60%;
